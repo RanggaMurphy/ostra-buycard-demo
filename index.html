@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$OSTRA — Stoa Buy Card Demo</title>
+<meta name="description" content="Demo preview of Stoa's buy card integrated on a token page, preset to $OSTRA on Robinhood Chain. Demo only, not affiliated with the OSTRA project.">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #0b0e13;
+    color: #e8ecf1;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 24px 16px 48px; }
+  .demo-banner {
+    background: #3a2f04;
+    border: 1px solid #a97e06;
+    color: #ffd94d;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  header.token { text-align: center; margin-bottom: 8px; }
+  header.token h1 { font-size: 40px; margin: 0 0 4px; letter-spacing: 0.5px; }
+  header.token p { margin: 0; color: #9aa7b5; font-size: 15px; }
+  .contract {
+    text-align: center;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px;
+    color: #7d8a99;
+    word-break: break-all;
+    margin: 10px 0 28px;
+  }
+  .card-box { display: flex; justify-content: center; margin-bottom: 28px; }
+  section.info {
+    background: #12161d;
+    border: 1px solid #232a35;
+    border-radius: 16px;
+    padding: 18px 20px;
+    font-size: 14.5px;
+    color: #c3ccd6;
+  }
+  section.info h2 { font-size: 16px; color: #e8ecf1; margin: 0 0 8px; }
+  section.info p { margin: 0 0 10px; }
+  section.info p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 12.5px;
+    color: #66727f;
+  }
+  a { color: #6db3f2; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="demo-banner">Demo preview — Stoa buy card integration example. This is a demo page only and is not affiliated with the OSTRA project.</div>
+
+  <header class="token">
+    <h1>$OSTRA</h1>
+    <p>Ostra Agent token · Robinhood Chain</p>
+  </header>
+
+  <p class="contract">Contract: 0x68Ff81dFFF6eccefb74706fE1e0a86320CB2Eb96</p>
+
+  <div class="card-box">
+    <!-- Official Stoa buy card embed (https://stoadex.com/docs/embed).
+         Token preset to $OSTRA; ref = integrator wallet that earns the referral share. -->
+    <iframe src="https://stoadex.com/embed/robinhood/0x68Ff81dFFF6eccefb74706fE1e0a86320CB2Eb96?ref=0x4D9F4C51935540a1efDc9Db3dbb67fBf44359775" width="100%" height="230" style="max-width:420px;border:0;border-radius:16px" title="Buy on Stoa" loading="lazy"></iframe>
+  </div>
+
+  <section class="info">
+    <h2>What this demo shows</h2>
+    <p>The card above is Stoa's official buy card, embedded with one iframe snippet. It shows the live $OSTRA price and what a small buy gets right now on Stoa, routed across venues on Robinhood Chain.</p>
+    <p>The <strong>Buy on Stoa</strong> button opens stoadex.com in a new tab with $OSTRA selected and the referrer attached, so swaps that start here credit the referral share to the integrator's wallet. No wallet connects inside the card and nothing is signed on this page.</p>
+    <p>On the real OSTRA site, this same snippet is all that needs to be pasted where the token is presented. Nothing else on the page has to change.</p>
+  </section>
+
+  <footer>
+    Demo built for the Stoa build bounty (swap widget / buy card entry).<br>
+    Not affiliated with or endorsed by the OSTRA project or Stoa. Prices and routes are read live from Stoa.
+  </footer>
+
+</div>
+</body>
+</html>
